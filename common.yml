@@ -1,0 +1,9 @@
+- hosts: dcos-bootstrap
+  remote_user: vagrant
+  become: yes
+  roles:
+    - ansible-dcos-common
+  tags:
+    - common
+    - ansible-dcos-common
+

@@ -1,0 +1,19 @@
+---
+# defaults file for ansible-dcos-bootstrap-node
+
+#dcos_bootstrap_url: "{{ bootstrap_internal_url }}"
+##bootstrap_internal_url: http://{{ hostvars['bootstrap1']['ansible_eth0']['ipv4']['address'] }}:{{ dcos_bootstrap_port }}
+#bootstrap_internal_url: http://{{ hostvars['bootstrap']['ansible_enp0s8']['ipv4']['address'] }}:{{ dcos_bootstrap_port }}
+#bootstrap_external_url: http://192.168.0.10:{{ dcos_bootstrap_port }}
+#dcos_bootstrap_port: 80
+#dcos_iface: eth0
+#dcos_bootstrap_dir : '{{ansible_env.HOME}}/dcos-bootstrap'
+##dcos_bootstrap_generate_config_url: https://downloads.dcos.io/dcos/EarlyAccess
+#dcos_bootstrap_generate_config_url: https://downloads.dcos.io/dcos/EarlyAccess/commit/14509fe1e7899f439527fb39867194c7a425c771
+#dcos_bootstrap_generate_config: dcos_generate_config.sh
+#dcos_cluster_name: 'dcos-ansible'
+#dcos_exhibitor_storage_backend: static
+##dcos_bootstrap_iface: eth0     # for AWS, etc
+#dcos_bootstrap_iface: enp0s8    # for virtualbox
+#dcos_resolvers_0: '8.8.8.4'
+#dcos_resolvers_1: '8.8.8.8'

@@ -1,0 +1,36 @@
+--- 
+- hosts: dcos-cluster,dcos-bootstrap
+  remote_user: vagrant
+  become: yes
+  roles:
+    - ansible-dcos-common
+  tags:
+    - common
+    - ansible-dcos-common
+
+- hosts: dcos-bootstrap
+  remote_user: vagrant
+  become: yes
+  roles:
+    - ansible-dcos-bootstrap-node
+  tags:
+    - bootstrap
+    - ansible-dcos-bootstrap-node
+
+- hosts: mesos-master
+  remote_user: vagrant
+  become: yes
+  roles:
+    - ansible-dcos-bootstrap-master
+  tags:
+    - bootstrap
+    - ansible-dcos-bootstrap-master
+
+- hosts: mesos-agent
+  remote_user: vagrant
+  become: yes
+  roles:
+    - ansible-dcos-bootstrap-agent
+  tags:
+    - bootstrap
+    - ansible-dcos-bootstrap-agent
